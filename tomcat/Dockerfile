@@ -9,7 +9,6 @@ ENV DB_TYPE=mysql
 
 # Deploy Superveda Web App & Tomcat config
 RUN rm -Rf /usr/local/tomcat/webapps/*
-COPY target/superveda.war /usr/local/tomcat/webapps/superveda.war
-COPY context.xml /usr/local/tomcat/conf/context.xml
+COPY tomcat/superveda.war /usr/local/tomcat/webapps/superveda.war
 
 EXPOSE 8080
